@@ -1,0 +1,14 @@
+services:
+  moriaserver:
+    container_name: tanks-moria-server
+    hostname: tanks-moria-server
+    image: gotanks0407/moriaserver
+    ports:
+      - "7777:7777"
+    environment:
+      - SERVERPASS=cruisingisfun
+      - SERVERNAME=Tanks Dedicated RTM Server
+    restart: always
+    volumes:
+      - ./moriaserver:/home/steam/moriaserver:rw
+
